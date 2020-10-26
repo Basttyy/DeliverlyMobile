@@ -12,7 +12,7 @@
         <Picker VerticalOptions="Center"
                 HorizontalOptions="Center"
                 Grid.Row="0">
-            <Picker.Items>
+            <Picker.Items> 
                 
             </Picker.Items>
         </Picker>
