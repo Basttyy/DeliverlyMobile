@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace Deliverly.Droid
 {
-    [Activity(MainLauncher = true, Label = "Delivearly", NoHistory =true)]
+    [Activity(MainLauncher = true, Theme = "@style/MyTheme.Splash", Label = "Delivearly", NoHistory =true)]
     public class SplashActivity : Activity
     {
         static readonly string TAG = "X:" + typeof(SplashActivity).Name;

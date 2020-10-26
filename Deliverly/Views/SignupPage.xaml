@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Deliverly.Views.SignupPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center"
+                     Margin="10,0">
+            <Image VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Source="delivearly"/>
+            <Label VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Margin="0,15"
+                   Text="Signup"
+                   FontSize="Title"/>
+            <Grid HorizontalOptions="FillAndExpand"
+                  VerticalOptions="Center"
+                  RowSpacing=".3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Entry HorizontalOptions="Fill"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       Placeholder="Firstname"
+                       x:Name="fnameEntry"
+                       Keyboard="Text"/>
+                <Entry HorizontalOptions="Fill"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       Placeholder="Lastname"
+                       x:Name="lnameEntry"
+                       Keyboard="Text"/>
+                <Entry HorizontalOptions="Fill"
+                       Grid.Column="0"
+                       Grid.Row="1"
+                       Placeholder="Email"
+                       x:Name="emailEntry"
+                       Keyboard="Email"/>
+                <Entry VerticalOptions="Center"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       Placeholder="Password"
+                       x:Name="passEntry"
+                       IsPassword="True"
+                       Keyboard="Default"/>
+                <Label VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Grid.Column="1"
+                       Grid.Row="2"
+                       TextColor="{StaticResource ColorAccent}"
+                       Text="Forgot Password">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnForgotPasswordTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Button VerticalOptions="Center"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="3"
+                    Text="Login"
+                    Clicked="OnLoginClicked"
+                    CornerRadius="5"/>
+            </Grid>
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center"
+                         HorizontalOptions="End"
+                         Margin="6,10">
+                <Label VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   Text="have account?"/>
+                <Label HorizontalOptions="End"
+                    TextColor="{StaticResource ColorAccent}"
+                    Text="Login Instead">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnForgotSignupTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

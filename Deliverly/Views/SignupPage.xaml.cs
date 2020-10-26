@@ -10,23 +10,15 @@ using Xamarin.Forms.Xaml;
 namespace Deliverly.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class SignupPage : ContentPage
     {
-        public LoginPage()
+        public SignupPage()
         {
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
         }
 
-        private void OnLoginClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
         private void OnForgotPasswordTapped(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-        private void OnSignupTapped(object sender, EventArgs e)
         {
             throw new NotImplementedException();
         }
